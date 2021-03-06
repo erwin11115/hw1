@@ -43,7 +43,10 @@ for i in range(len(ave_list)):
 
 target_data = []
 for i in range(len(ave_list)):
-    target_data.append([target_ids[i],ave_list[i]])
+    if ave_list[i]] > 0:
+        target_data.append([target_ids[i],ave_list[i]])
+    else
+        target_data.append([target_ids[i], 'None')
 
 print(target_data)
 
