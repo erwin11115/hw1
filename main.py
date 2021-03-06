@@ -2,12 +2,14 @@
 # #File: chaos.py
 
 import csv
+import os
+os.chdir(os.path.dirname(os.path.abspath(__file__)))
+#print(os.getcwd())
 
-path = '//home//ee2405//ee2405//hw1//'
 cwd_filename = '108061119.csv'
 data = []
 header = []
-with open(path + cwd_filename) as csvfile:
+with open(cwd_filename) as csvfile:
     mycsv = csv.DictReader(csvfile)
     header = mycsv.fieldnames
     for row in mycsv:
